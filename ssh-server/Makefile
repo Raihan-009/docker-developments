@@ -2,7 +2,7 @@ tag:=v0.1.0
 image_name:=ssh-server
 
 build-ssh-container:
-	@ docker build -f Dockerfile -t ${image_name}:${tag} .
+	@ docker build --platform linux/amd64 -f Dockerfile -t ${image_name}:${tag} .
 
 run-ssh-container:
 	@ docker run --name ${image_name} -p 2222:22 -d ${image_name}:${tag}
