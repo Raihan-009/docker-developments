@@ -1,4 +1,4 @@
-tag:=v0.1.0
+tag:=v0.1.1
 image_name:=ssh-server
 
 build-ssh-container:
