@@ -6,7 +6,7 @@ RUN adduser -D -u 1000 ryuzaki && \
     echo 'ryuzaki:1809009' | chpasswd && \
     addgroup ryuzaki wheel
 
-RUN rc-service sshd start
+RUN /etc/init.d/sshd start
 
 EXPOSE 22
 

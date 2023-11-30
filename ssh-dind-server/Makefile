@@ -1,4 +1,4 @@
-tag:=v0.1.1
+tag:=v0.1.2
 image_name:=ssh-dind-server
 
 build-ssh-container:
