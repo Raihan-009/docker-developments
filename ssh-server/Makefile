@@ -5,7 +5,7 @@ build-ssh-container:
 	@ docker build --platform linux/amd64 -f Dockerfile -t ${image_name}:${tag} .
 
 run-ssh-container:
-	@ docker run --name ${image_name} -p 2222:22 -d ${image_name}:${tag}
+	@ docker run --privileged --name ${image_name} -p 2222:22 -d ${image_name}:${tag}
 
 rm-ssh-container:
 	@ docker stop ${image_name}
