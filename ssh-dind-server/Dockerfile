@@ -4,10 +4,9 @@ RUN apk --update add openssh-server sudo
 
 RUN adduser -D -u 1000 ryuzaki && \
     echo 'ryuzaki:1809009' | chpasswd && \
-    addgroup ryuzaki root && \
     addgroup ryuzaki wheel
 
-RUN service ssh start
+RUN rc-service sshd start
 
 EXPOSE 22
 
