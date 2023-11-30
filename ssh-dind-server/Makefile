@@ -1,11 +1,11 @@
-tag:=v0.1.6
+tag:=v0.1.7
 image_name:=ssh-dind-server
 
 build-ssh-container:
 	@ docker build -f Dockerfile -t ${image_name}:${tag} .
 
 run-ssh-container:
-	@ docker run --privileged --name ${image_name} -p 2222:22 -d ${image_name}:${tag}
+	@ docker run --privileged --name ${image_name} -p 2223:22 -d ${image_name}:${tag}
 
 rm-ssh-container:
 	@ docker stop ${image_name}

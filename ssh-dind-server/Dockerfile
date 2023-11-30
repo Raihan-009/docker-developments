@@ -6,7 +6,7 @@ EXPOSE 22
 
 RUN ssh-keygen -A
 
-
+RUN echo "root:1809009" | chpasswd
 RUN useradd -m -G wheel -s /bin/bash ryuzaki \
     && echo "ryuzaki:1809009" | chpasswd
 
