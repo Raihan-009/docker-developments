@@ -1,5 +1,5 @@
 img:=fastapi
-tag:=v1.4
+tag:=v1.6
 user:=poridhi
 name:=api-container
 
@@ -13,7 +13,7 @@ run:
 	docker run --platform linux/amd64 --name ${name} -d -p 8000:8000 ${user}/${img}:${tag}
 
 run-ms:
-	docker run --platform linux/amd64 --name ${name}-multistage -d -p 8000:8000 ${user}/${img}:${tag}
+	docker run --platform linux/amd64 --name ${name}-multistage -d -p 8001:8000 ${user}/${img}:${tag}
 
 clean:
 	docker stop ${name}
