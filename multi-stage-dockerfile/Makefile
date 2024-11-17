@@ -1,5 +1,5 @@
 img:=fastapi
-tag:=v1.6
+tag:=v1.0
 user:=poridhi
 name:=api-container
 
